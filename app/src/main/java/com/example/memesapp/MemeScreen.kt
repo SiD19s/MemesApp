@@ -85,8 +85,14 @@ fun MemeScreen(viewModel: MemeViewModel, modifier: Modifier,context:Context) {
 
         Button(
             onClick = {
-                downloader.downloadFile(imageUrl, name = Imagename)
-                downloaded.value = !downloaded.value
+
+
+                if (!downloaded.value){
+                    downloader.downloadFile(imageUrl, name = Imagename)
+                    downloaded.value = true
+                }else{
+
+                }
             },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
