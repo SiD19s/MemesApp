@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MemesAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MemeScreen(viewModel,modifier = Modifier.padding(innerPadding))
+                    MemeScreen(viewModel,modifier = Modifier.padding(innerPadding),this)
                 }
             }
         }
