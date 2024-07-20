@@ -71,7 +71,7 @@ fun MemeScreen(viewModel: MemeViewModel, modifier: Modifier,context:Context) {
                 val x =  getRandomNumber(0, 99)
                 count.value = x
                 Log.d("MemeScreen", "count: ${count.value}")
-                downloaded.value = !downloaded.value
+                downloaded.value = false
             },
             modifier = Modifier
                 .align(Alignment.BottomStart)
